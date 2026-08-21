@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-@RestControllerAdvice
+@RestControllerAdvice       // This makes my exception handlers global
 public class ControllerAdvisor {
 
     @ExceptionHandler(IllegalArgumentException.class)
