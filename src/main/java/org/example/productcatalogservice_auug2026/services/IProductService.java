@@ -6,4 +6,6 @@ public interface IProductService {
     Product getProductDetailsById(Long id);
 
     Product replaceProduct(Long id, Product inputProduct);
+
+    Product createProduct(Product product);
 }

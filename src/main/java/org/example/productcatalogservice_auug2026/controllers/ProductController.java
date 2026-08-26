@@ -6,6 +6,7 @@ import org.example.productcatalogservice_auug2026.models.Category;
 import org.example.productcatalogservice_auug2026.models.Product;
 import org.example.productcatalogservice_auug2026.services.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -47,6 +48,16 @@ public class ProductController {
         Product output = productService.replaceProduct(id,inputProduct);
         ProductDto responseProductDto =  from(output);
         return new ResponseEntity<>(responseProductDto,HttpStatus.OK);
+    }
+
+
+    @PostMapping("/products")
+    public ResponseEntity<ProductDto> createProduct(@RequestBody ProductDto
+                                                             productDto) {
+         Product product = from(productDto);
+         Product output = productService.createProduct(product);
+         ProductDto response = from(output);
+         return new ResponseEntity<>(response,HttpStatus.CREATED);
     }
 
     private Product from(ProductDto productDto) {

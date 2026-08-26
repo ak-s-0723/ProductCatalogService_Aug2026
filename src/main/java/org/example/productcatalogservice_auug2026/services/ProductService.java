@@ -62,6 +62,11 @@ public class ProductService implements IProductService {
         return null;
     }
 
+    @Override
+    public Product createProduct(Product product) {
+        return null;
+    }
+
 
     public <T> ResponseEntity<T> putForEntity(String url, @Nullable Object request, Class<T> responseType, Object... uriVariables) throws RestClientException {
         RestTemplate restTemplate = restTemplateBuilder.build();
