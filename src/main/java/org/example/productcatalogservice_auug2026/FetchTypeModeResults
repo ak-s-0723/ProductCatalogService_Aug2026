@@ -1,0 +1,28 @@
+FetchType        FetchMode          Result
+
+LAZY             SELECT             Asked For Products - Queries -
+                                    Not Asked For Products - Queries -
+
+
+EAGER            SELECT             Asked For Products - Queries -
+                                    Not Asked For Products - Queries -
+
+
+
+LAZY             JOIN               Asked For Products - Queries -
+                                    Not Asked For Products - Queries -
+
+
+
+EAGER            JOIN               Asked For Products - Queries -
+                                    Not Asked For Products - Queries -
+
+
+
+LAZY             SUBSELECT           Asked For Products - Queries -
+                                     Not Asked For Products - Queries -
+
+
+
+EAGER            SUBSELECT          Asked For Products - Queries -
+                                    Not Asked For Products - Queries -
