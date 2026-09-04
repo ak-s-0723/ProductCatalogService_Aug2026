@@ -64,4 +64,17 @@ class ProductControllerTest {
 
     }
 
+    @Test
+    public void TestGetProductDetailsById_WithZeroId_ResultsInIllegalArgumentException() {
+        //Arrange
+        Long productId = 0L;
+
+        //Act and Assert
+        Exception exception = assertThrows(IllegalArgumentException.class,
+                ()-> productController.getProductDetailsById(productId));
+
+        assertEquals("Please pass id > 0", exception.getMessage());
+
+    }
+
 }
