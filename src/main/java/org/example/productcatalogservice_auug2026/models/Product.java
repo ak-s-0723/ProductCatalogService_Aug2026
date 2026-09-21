@@ -1,5 +1,6 @@
 package org.example.productcatalogservice_auug2026.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
@@ -15,6 +16,7 @@ public class Product extends BaseModel {
     private String imageUrl;
     private Double price;
     @ManyToOne(cascade = CascadeType.ALL)
+    @JsonManagedReference
     private Category category;
     private Boolean isSaleEligible;  //This is why we require dto
 }
